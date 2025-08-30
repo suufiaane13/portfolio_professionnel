@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fr" class="preload">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Sadiki - Technicien en Électricité Industrielle</title>
+    <meta name="description" content="Technicien spécialisé en installation et maintenance électrique industrielle avec formations certifiées et compétences multilingues">
+    
+    <!-- Script anti-FOUC (Flash of Unstyled Content) -->
+    <script>
+        // Appliquer immédiatement le thème avant le chargement du CSS
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark-mode');
+            }
+            
+            // Supprimer la classe de préchargement une fois le chargement terminé
+            document.addEventListener('DOMContentLoaded', () => {
+                document.documentElement.classList.remove('preload');
+            });
+        })();
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Skills Wheel CSS -->
+    <link rel="stylesheet" href="skills-wheel-modern.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    
+    <style>
+        /* Styles initiaux pour éviter le flash de contenu */
+        .preload * {
+            transition: none !important;
+        }
+        
+        /* Styles de base pour le thème sombre */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+        }
+        
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #f5f5f5;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <a href="#" class="logo">
+                        <span class="logo-text">M. SADIKI</span>
+                        <span class="logo-subtext">Électricien Industriel</span>
+                    </a>
+                    
+                    <div class="nav-actions">
+                        <button class="theme-toggle" aria-label="Changer de thème">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#apropos" class="nav-link" data-text="À propos">
+                                <i class="fas fa-user nav-icon"></i>
+                                <span>À propos</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#formations" class="nav-link" data-text="Formations">
+                                <i class="fas fa-graduation-cap nav-icon"></i>
+                                <span>Formations</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#competences" class="nav-link" data-text="Compétences">
+                                <i class="fas fa-code-branch nav-icon"></i>
+                                <span>Compétences</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#langues" class="nav-link" data-text="Langues">
+                                <i class="fas fa-language nav-icon"></i>
+                                <span>Langues</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link nav-cta" data-text="Contact">
+                                <i class="fas fa-paper-plane nav-icon"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">Électricien Industriel Professionnel</span>
+                    <div class="title-with-avatar">
+                        <div class="avatar-container">
+    <img 
+        src="img/optimized/avatar-1294773_1280.webp" 
+        alt="Mohammed SADIKI" 
+        loading="lazy"
+    >
+</div>
+                        </div>
+                        <h1 class="hero-title animate-on-scroll">Mohammed SADIKI</h1>
+                    </div>
+                    <p class="hero-description">
+                        Spécialisé dans les solutions électriques sur mesure pour les entreprises industrielles.
+                        Des interventions rapides et efficaces garantissant la sécurité et la performance de vos installations.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i> Contactez-moi
+                        </a>
+                        <a href="#competences" class="btn btn-outline">
+                            <i class="fas fa-graduation-cap"></i> Mes Compétences
+                        </a>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Certifié et qualifié</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Intervention rapide</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Service professionnel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Défiler vers le bas</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="section fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Expertise Professionnelle</h2>
+                <p class="section-subtitle">Des solutions électriques sur mesure pour tous vos besoins industriels et résidentiels</p>
+            </div>
+            
+            <div class="expertise-grid">
+                <!-- Carte 1 -->
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Pour les Entreprises</h3>
+                    <div class="expertise-features">
+                        <p><i class="fas fa-check-circle"></i> Maintenance préventive et corrective</p>
+                        <p><i class="fas fa-check-circle"></i> Mise aux normes des installations</p>
+                        <p><i class="fas fa-check-circle"></i> Optimisation énergétique</p>
+                        <p><i class="fas fa-check-circle"></i> Support technique 24/7</p>
+                    </div>
+                    <div class="expertise-level">
+                        <span class="level-tag enterprise">Niveau Expert</span>
+                    </div>
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Pour les Particuliers</h3>
+                    <div class="expertise-features">
+                        <p><i class="fas fa-check-circle"></i> Installation électrique complète</p>
+                        <p><i class="fas fa-check-circle"></i> Rénovation et mises aux normes</p>
+                        <p><i class="fas fa-check-circle"></i> Dépannage rapide</p>
+                        <p><i class="fas fa-check-circle"></i> Conseils personnalisés</p>
+                    </div>
+                    <div class="expertise-level">
+                        <span class="level-tag residential">Tous Niveaux</span>
+                    </div>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="expertise-card highlight">
+                    <div class="expertise-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Spécialiste en Automatisme</h3>
+                    <div class="expertise-features">
+                        <p><i class="fas fa-check-circle"></i> Programmation d'automates</p>
+                        <p><i class="fas fa-check-circle"></i> Supervision industrielle</p>
+                        <p><i class="fas fa-check-circle"></i> Gestion technique du bâtiment</p>
+                        <p><i class="fas fa-check-circle"></i> Solutions domotiques</p>
+                    </div>
+                    <div class="expertise-level">
+                        <span class="level-tag premium">Niveau Avancé</span>
+                        <span class="certified"><i class="fas fa-award"></i> Certifié</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="formations" class="section fade-up" style="background: linear-gradient(135deg, var(--formation-bg-start) 0%, var(--formation-bg-mid) 50%, var(--formation-bg-end) 100%);">
+        <div class="container">
+            <h2 class="section-title">Parcours de Formation</h2>
+            <div class="timeline">
+                <!-- Les formations seront chargées dynamiquement ici par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section - Wheel Design with Swiper -->
+    <section id="competences" class="section fade-up skills-wheel-section">
+        <div class="skills-wheel-container">
+            <div class="container">
+                <h2 class="section-title">Mes Compétences</h2>
+            </div>
+            
+            <!-- Skills Swiper -->
+            <div class="skills-swiper swiper">
+                <div class="swiper-wrapper">
+                    <!-- Les compétences seront ajoutées dynamiquement par JavaScript -->
+                </div>
+                
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="langues" class="section fade-up" style="background-color: var(--gray-200);">
+        <div class="container">
+            <h2 class="section-title">Langues</h2>
+            <div class="languages-container">
+                <div class="language-item">
+                    <div class="language-flag">🇩🇪</div>
+                    <div class="language-content">
+                        <h3 class="language-name">Allemand</h3><br>
+                        <p class="language-level" data-level="intermediate">Intermédiaire</p>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-flag">🇫🇷</div>
+                    <div class="language-content">
+                        <h3 class="language-name">Français</h3><br>
+                        <p class="language-level" data-level="intermediate">Intermédiaire</p>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-flag">ENG</div>
+                    <div class="language-content">
+                        <h3 class="language-name">Anglais</h3><br>
+                        <p class="language-level" data-level="basic">Notions de base</p>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-flag">🇲🇦</div>
+                    <div class="language-content">
+                        <h3 class="language-name">Arabe</h3><br>
+                        <p class="language-level" data-level="native">Langue maternelle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Design Moderne Sans Cartes -->
+    <section id="contact" class="section fade-up">
+        <!-- Background shapes -->
+        <div class="contact-bg-shape contact-bg-shape-1"></div>
+        <div class="contact-bg-shape contact-bg-shape-2"></div>
+        
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <p class="section-subtitle" style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: var(--gray-600);">
+                N'hésitez pas à me contacter pour toute opportunité ou question. Je vous répondrai dans les plus brefs délais.
+            </p>
+            
+            <!-- Carte de contact mobile (visible uniquement sur mobile) -->
+            <div class="mobile-contact-card">
+                <div class="mobile-contact-header">
+                    <h3><i class="fas fa-address-card"></i> Mes coordonnées</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="mobile-contact-content">
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Téléphone / WhatsApp</h4>
+                                <a href="https://wa.me/212623403245" target="_blank">
+                                    +212 623 403 245
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:sadkimed411@gmail.com">sadkimed411@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Localisation</h4>
+                                <p>Hay Saada rue Khaibar Nr 15, Arlfr, Rabat</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Zone d'intervention</h4>
+                                <p>Rabat et ses environs</p>
+                                <small>Déplacements possibles dans toute la région</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-content">
+                <!-- Colonne de contact -->
+                <div class="contact-column">
+                    <h2>Contact Rapide</h2>
+                    <p>Pour une réponse rapide, vous pouvez m'appeler directement ou m'envoyer un email. Je suis également disponible sur WhatsApp pour discuter de votre projet.</p>
+                    
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Téléphone / WhatsApp</h4>
+                                <a href="https://wa.me/212623403245" target="_blank">
+                                    +212 623 403 245
+                                </a>
+                                <hr>
+                            </div>
+                           
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:sadkimed411@gmail.com">sadkimed411@gmail.com</a>
+                                <hr>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Localisation</h4>
+                                <p>Hay Saada rue Khaibar Nr 15, Ahfir, Maroc</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form">
+                    <h3>Envoyez un message</h3>
+                    <p class="form-intro">Remplissez le formulaire ci-dessous et je vous recontacterai rapidement.</p>
+                    
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Votre nom complet</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Votre message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Décrivez votre projet ou votre demande..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Colonne À propos -->
+                <div class="footer-column">
+                    <h4>À propos</h4>
+                    <div class="footer-about">
+                        <a href="#" class="logo">
+                            <span class="logo-text">M. SADIKI</span>
+                            <span class="logo-subtext">Électricien Industriel</span>
+                        </a>
+                        <p>Spécialiste en installation et maintenance électrique industrielle, je m'engage à fournir des solutions fiables et sécurisées pour tous vos projets électriques.</p>
+                    </div>
+                    <div class="social-links" style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin: 2rem 0;">
+                        <a href="https://www.facebook.com/mohamed.sadiki.71" class="social-link" aria-label="Facebook" title="Facebook" style="background-color: #1877F2;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sadiki_mhd_96" class="social-link" aria-label="Instagram" title="Instagram" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/212623403245" class="social-link" aria-label="WhatsApp" title="WhatsApp" style="background-color: #25D366;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:sadkimed411@gmail.com" class="social-link" aria-label="Email" title="Email" style="background-color: #EA4335;">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn" style="background-color: #0A66C2;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Liens rapides -->
+                <div class="footer-column">
+                    <h4>Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="#apropos"><i class="fas fa-chevron-right"></i> À propos</a></li>
+                        <li><a href="#formations"><i class="fas fa-chevron-right"></i> Formations</a></li>
+                        <li><a href="#competences"><i class="fas fa-chevron-right"></i> Compétences</a></li>
+                        <li><a href="#experiences"><i class="fas fa-chevron-right"></i> Expériences</a></li>
+                        <li><a href="#langues"><i class="fas fa-chevron-right"></i> Langues</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Hay Saada rue Khaibar Nr 15, Ahfir, Maroc</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+212 623 403 245">+212 623 403 245</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:sadkimed411@gmail.com">sadkimed411@gmail.com</a></p>
+                        <p><i class="fas fa-clock"></i> Lun-Ven: 8h00 - 18h00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="text-align: center;">
+                <p>&copy; <span id="currentYear"></span> Mohammed SADIKI. Tous droits réservés.</p>
+                <div class="footer-legal" style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--gray-600); text-align: center;">
+                        Développé avec <i class="fas fa-heart" style="color: #e74c3c; animation: heartbeat 1.5s ease-in-out infinite;"></i> par 
+                        <a href="https://github.com/suufiaane13" target="_blank" style="color: var(--primary-blue); text-decoration: none; font-weight: 500; transition: all 0.3s ease;">Soufiane HAJJI</a>
+                    </p>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        <a href="privacy-policy.html" style="color: var(--gray-600); text-decoration: none; font-size: 0.8rem; transition: color 0.3s ease;">
+                            Politique de confidentialité
+                        </a>
+                        <span style="color: var(--gray-400)">|</span>
+                        <a href="legal-notice.html" style="color: var(--gray-600); text-decoration: none; font-size: 0.8rem; transition: color 0.3s ease;">
+                            Mentions légales
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Dark mode toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Data JS -->
+    <script src="data.js"></script>
+    <!-- Main JS -->
+    <script src="main.js"></script>
+    <!-- Skills Wheel JS -->
+    <script src="skills-wheel-swiper.js"></script>
+    
+    <!-- Animation et chargement des images -->
+    <script src="js/scroll-animations.js"></script>
+</body>
+</html>

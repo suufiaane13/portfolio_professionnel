@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - Mohammed Sadiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .legal-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .legal-container h1 {
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .legal-container h2 {
+            color: var(--primary-blue);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+        .legal-container p, .legal-container ul {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .legal-container ul {
+            padding-left: 2rem;
+        }
+        .back-to-home {
+            display: inline-block;
+            margin: 2rem 0;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-to-home i {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-to-home">
+            <i class="fas fa-arrow-left"></i> Retour à l'accueil
+        </a>
+        
+        <div class="legal-container">
+            <h1>Mentions Légales</h1>
+            <p><em>En vigueur au 30/08/2024</em></p>
+
+            <h2>1. Éditeur du site</h2>
+            <p>Le site internet <strong>mohammed-sadiki.com</strong> est édité par :</p>
+            <p>
+                <strong>Mohammed SADIKI</strong><br>
+                Électricien Industriel Indépendant<br>
+                Hay Saada rue Khaibar Nr 15<br>
+                Ahfir, Maroc<br>
+                Tél. : <a href="tel:+212623403245" style="color: var(--primary-blue);">+212 623 403 245</a><br>
+                Email : <a href="mailto:sadkimed411@gmail.com" style="color: var(--primary-blue);">sadkimed411@gmail.com</a>
+            </p>
+
+            <h2>2. Directeur de la publication</h2>
+            <p>Monsieur Mohammed SADIKI, en qualité de propriétaire du site.</p>
+
+            <h2>3. Développement et Hébergement</h2>
+            <p>Le site a été développé et est hébergé par :</p>
+            <p>
+                <strong>Soufiane HAJJI</strong><br>
+                Email : <a href="mailto:hjisfn@gmail.com" style="color: var(--primary-blue);">hjisfn@gmail.com</a><br>
+                GitHub : <a href="https://github.com/suufiaane13" target="_blank" style="color: var(--primary-blue);">@suufiaane13</a>
+            </p>
+
+            <h2>4. Propriété intellectuelle</h2>
+            <p>L'ensemble des éléments constituant le site (textes, images, vidéos, logos, etc.) sont la propriété exclusive de Mohammed SADIKI ou de ses partenaires. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable.</p>
+
+            <h2>5. Données personnelles</h2>
+            <p>Conformément à la loi n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition aux données vous concernant. Pour exercer ce droit, veuillez nous contacter à l'adresse email indiquée ci-dessus.</p>
+            <p>Pour plus d'informations sur la manière dont nous traitons vos données, consultez notre <a href="privacy-policy.html" style="color: var(--primary-blue);">Politique de confidentialité</a>.</p>
+
+            <h2>6. Cookies</h2>
+            <p>Le site utilise des cookies pour améliorer l'expérience utilisateur. En naviguant sur ce site, vous acceptez l'utilisation des cookies conformément à notre politique de confidentialité.</p>
+
+            <h2>7. Liens hypertextes</h2>
+            <p>Le site peut contenir des liens hypertextes vers d'autres sites. Mohammed SADIKI n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
+
+            <h2>8. Droit applicable et juridiction compétente</h2>
+            <p>Les présentes mentions légales sont soumises au droit marocain. En cas de litige, les tribunaux marocains seront seuls compétents.</p>
+
+            <h2>9. Contact</h2>
+            <p>Pour toute question concernant les présentes mentions légales, vous pouvez nous contacter :</p>
+            <p>
+                Par email : <a href="mailto:sadkimed411@gmail.com" style="color: var(--primary-blue);">sadkimed411@gmail.com</a><br>
+                Par téléphone : <a href="tel:+212623403245" style="color: var(--primary-blue);">+212 623 403 245</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Appliquer le thème
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark-mode');
+            }
+            
+            // Mettre à jour l'année du copyright
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
