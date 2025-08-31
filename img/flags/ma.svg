@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="60" height="40">
+  <rect width="60" height="40" fill="#c1272d"/>
+  <!-- Étoile verte à 5 branches -->
+  <path d="M30 12 L32 20 L40 20 L34 25 L36 33 L30 28 L24 33 L26 25 L20 20 L28 20 Z" 
+        fill="#006233" 
+        stroke="#006233" 
+        stroke-width="0.5"/>
+</svg>

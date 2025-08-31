@@ -2688,11 +2688,20 @@ left: -35px;
 }
 
 .language-flag {
-    font-size: 3rem;
+    width: 48px;
+    height: 36px;
     margin-bottom: 15px;
-    display: inline-block;
-    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.flag-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .language-item:hover .language-flag {
@@ -2874,7 +2883,8 @@ left: -35px;
     }
 
     .language-flag {
-        font-size: 2.5rem;
+        width: 42px;
+        height: 32px;
         margin-bottom: 12px;
     }
 
@@ -2901,9 +2911,10 @@ left: -35px;
     }
 
     .language-flag {
-        font-size: 2.2rem;
+        width: 38px;
+        height: 28px;
         margin: 0;
-        min-width: 50px;
+        min-width: 38px;
         text-align: center;
     }
 
@@ -2955,8 +2966,9 @@ left: -35px;
     }
 
     .language-flag {
-        font-size: 2rem;
-        min-width: 45px;
+        width: 36px;
+        height: 27px;
+        min-width: 36px;
     }
 
     .language-name {
